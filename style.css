@@ -20,7 +20,7 @@ body {
 /* HERO / CAPA COM IMAGEM DE FUNDO */
 .hero {
   /* Substitua 'foto-casal.jpg' pelo caminho ou nome da sua foto */
-  background-image: url('foto-capa.jpg'); 
+  background-image: url('https://github.com/luizcunhago1/eduardo-lohana/blob/main/foto-capa.jpg'); 
   
   /* Mantém a imagem centralizada e cobrindo toda a área da capa */
   background-size: cover;
