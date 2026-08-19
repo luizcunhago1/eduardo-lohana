@@ -1,5 +1,5 @@
 // 1. CONTADOR REGRESSIVO
-const weddingDate = new Date("2026-11-15T18:00:00").getTime();
+const weddingDate = new Date("2027-07-17T16:00:00").getTime();
 
 function updateCountdown() {
   const now = new Date().getTime();
