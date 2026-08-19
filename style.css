@@ -17,12 +17,28 @@ body {
   padding: 20px;
 }
 
-/* HERO & CONTADOR */
+/* HERO / CAPA COM IMAGEM DE FUNDO */
 .hero {
-  background: #6b4f4f;
-  color: #fff;
+  /* Substitua 'foto-casal.jpg' pelo caminho ou nome da sua foto */
+  background-image: url('foto-capa.jpg'); 
+  
+  /* Mantém a imagem centralizada e cobrindo toda a área da capa */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  /* Ajusta o alinhamento do texto */
+  color: #ffffff;
   text-align: center;
-  padding: 80px 20px;
+  position: relative;
+}
+
+/* Camada escura por cima da foto para dar contraste ao texto */
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.45); /* Escurece a foto em 45% */
+  padding: 100px 20px;
+  width: 100%;
+  height: 100%;
 }
 
 .hero h1 { font-size: 2.5rem; margin-bottom: 10px; }
