@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nosso Casamento</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HERO / CAPA -->
+  <header class="hero">
+    <div class="hero-overlay">
+      <h1>Sua Foto / Nomes do Casal</h1>
+      <p>Vamos nos casar!</p>
+      
+      <!-- CONTADOR REGRESSIVO -->
+      <div id="countdown" class="countdown">
+        <div><span id="days">00</span><p>Dias</p></div>
+        <div><span id="hours">00</span><p>Horas</p></div>
+        <div><span id="minutes">00</span><p>Minutos</p></div>
+        <div><span id="seconds">00</span><p>Segundos</p></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    
+    <!-- SOBRE / HISTÓRIA -->
+    <section class="section">
+      <h2>Nossa História</h2>
+      <p>Escreva aqui um breve resumo da trajetória de vocês dois...</p>
+    </section>
+
+    <!-- INFORMAÇÕES DO EVENTO -->
+    <section class="section grid-2">
+      <div class="card-info">
+        <h3>Cerimônia & Festa</h3>
+        <p><strong>Data:</strong> 17 de Julho de 2027</p>
+        <p><strong>Horário:</strong> 16:00h</p>
+        <p><strong>Local:</strong> Donna Mãe / Barra Velha - SC</p>
+        <a href="https://www.google.com/maps/place/Donna+M%C3%A3e+Tabuleiro+-+Festas+e+Eventos/@-26.6470792,-48.6866369,581m/data=!3m2!1e3!4b1!4m6!3m5!1s0x94d92b156e25ab77:0x9f598174f51a0540!8m2!3d-26.647084!4d-48.684062!16s%2Fg%2F11zdgrbmym?entry=ttu&g_ep=EgoyMDI2MDgxNy4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn">Como Chegar (Maps)</a>
+      </div>
+      <div class="card-info">
+        <h3>Informações Úteis</h3>
+        <p><strong>Traje:</strong> Passeio Completo</p>
+        <p>Confirme sua presença até o dia 01/12/2026.</p>
+      </div>
+    </section>
+
+    <!-- LISTA DE PRESENTES (PIX) -->
+    <section class="section">
+      <h2>Lista de Presentes Virtuais</h2>
+      <p>Sua presença é o nosso maior presente! Se desejar nos presentear, escolha uma das cotas abaixo:</p>
+      
+      <div class="gifts-grid">
+        <!-- ITEM 1 -->
+        <div class="gift-card">
+          <div class="gift-img-placeholder">📸</div>
+          <h3>Jantar Romântico</h3>
+          <p class="price">R$ 150,00</p>
+          <button class="btn" onclick="openPixModal('Jantar Romântico', '150.00')">Presentear com PIX</button>
+        </div>
+
+        <!-- ITEM 2 -->
+        <div class="gift-card">
+          <div class="gift-img-placeholder">✈️</div>
+          <h3>Passeio na Lua de Mel</h3>
+          <p class="price">R$ 300,00</p>
+          <button class="btn" onclick="openPixModal('Passeio na Lua de Mel', '300.00')">Presentear com PIX</button>
+        </div>
+
+        <!-- ITEM 3 -->
+        <div class="gift-card">
+          <div class="gift-img-placeholder">🥂</div>
+          <h3>Brinde dos Noivos</h3>
+          <p class="price">R$ 80,00</p>
+          <button class="btn" onclick="openPixModal('Brinde dos Noivos', '80.00')">Presentear com PIX</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- RSVP (CONFIRMAÇÃO) -->
+    <section class="section">
+      <h2>Confirmação de Presença (RSVP)</h2>
+      <form id="rsvp-form" class="form">
+        <input type="text" placeholder="Seu nome completo" required />
+        <input type="email" placeholder="Seu e-mail ou WhatsApp" required />
+        <select required>
+          <option value="">Você comparecerá?</option>
+          <option value="sim">Sim, estarei lá!</option>
+          <option value="nao">Infelizmente não poderei ir</option>
+        </select>
+        <input type="number" placeholder="Quantidade de acompanhantes" min="0" max="5" />
+        <button type="submit" class="btn">Enviar Confirmação</button>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- MODAL PIX -->
+  <div id="pix-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closePixModal()">&times;</span>
+      <h3 id="modal-gift-title">Presentear</h3>
+      <p>Valor sugerido: <strong id="modal-gift-price">R$ 0,00</strong></p>
+      
+      <div class="qr-container">
+        <!-- Imagem do seu QR Code PIX -->
+        <img src="https://via.placeholder.com/180?text=QR+Code+PIX" alt="QR Code PIX" id="pix-qr" />
+      </div>
+
+      <p>Chave PIX (E-mail / Telefone / Aleatória):</p>
+      <input type="text" id="pix-key" value="seu-email-aqui@dominio.com" readonly />
+      <button class="btn" onclick="copyPixKey()">Copiar Chave PIX</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
